@@ -1,0 +1,40 @@
+Dictionary is collection of key:value pair enclosed in '{}',each pair separated by ',' and each key,value separated by ':'
+
+student={'Std_id':[1,2,3,4],'Name':['Raj','Shivani','Mohan','Anjali'],'Age':[13,13,12,14],'class':4}
+student
+o/p-> {'Std_id': [1, 2, 3, 4],
+       'Name': ['Raj', 'Shivani', 'Mohan', 'Anjali'],
+       'Age': [13, 13, 12, 14],
+       'class': 4}
+
+student.keys()                                 # Returns all the keys of dictionary
+o/p-> dict_keys(['Std_id', 'Name', 'Age', 'class'])
+
+student.values()                               # Returns all the values to keys of dictionary
+o/p-> dict_values([[1, 2, 3, 4], ['Raj', 'Shivani', 'Mohan', 'Anjali'], [13, 13, 12, 14], 4])
+
+student.items()                                # Returns all the key-value pairs
+o/p-> dict_items([('Std_id', [1, 2, 3, 4]), ('Name', ['Raj', 'Shivani', 'Mohan', 'Anjali']), ('Age', [13, 13, 12, 14]), ('class', 4)])
+
+student['Name']                                # Returns all the values of Name key
+o/p-> ['Raj', 'Shivani', 'Mohan', 'Anjali']
+
+student['Std_id'].append(5)                    #insert new data in each key
+student['Name'].append('VB')
+student['Age'].append(13)
+student
+o/p-> {'Std_id': [1, 2, 3, 4, 5],
+       'Name': ['Raj', 'Shivani', 'Mohan', 'Anjali', 'VB'],
+       'Age': [13, 13, 12, 14, 13],
+       'class': 4}
+
+student.update({'Sex':['M','F','M','F','M']})  # Add new key with it's values
+student
+o/p-> {'Std_id': [1, 2, 3, 4],
+       'Name': ['Raj', 'Shivani', 'Mohan', 'Anjali'],
+       'Age': [13, 13, 12, 14],
+       'class': 4,
+       'Sex': ['M', 'F', 'M', 'F', 'M']}
+
+student['Name'][2]                             #Indexing
+o/p-> 'Mohan'
