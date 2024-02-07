@@ -1,0 +1,55 @@
+set_A={1,2,'B'}
+set_A
+o/p-> {1,2,'B'}
+
+set_A.add((2,3,4))
+set_A
+o/p-> {(2,3,4),1,2,'B'}
+
+print(type(set_A))
+o/p-> <class 'set'>
+
+set_B={5,2,7,3,'C'}
+set_A.union(set_B)
+set_A
+o/p-> {1, 2, 3, 5, 7, 'B', 'C'}
+
+#Empty Set
+b=set()
+type(b)
+o/p-> set
+
+# Set can't add list/Set/Dictionary 
+
+set_A.add([9,7,'J'])
+set_A
+o/p-> TypeError: unhashable type: 'list'
+
+#List items can be added to set using update function'
+A={1,2,4,7,8,'A','B','C'}
+A.update([10,20,30])
+A
+o/p-> {1, 10, 2, 20, 30, 4, 7, 8, 'A', 'B', 'C'}
+
+SET Operations
+A={1,2,4,7,8,'A','B','C'}
+B={2,7,'C',4}
+A.union(B)
+o/p-> {1, 2, 4, 7, 8, 'A', 'B', 'C'}
+
+A.difference(B)
+o/p-> {1, 8, 'A', 'B'}
+
+A.intersection(B)
+o/p-> {2, 4, 7, 'C'}
+
+A={1,2}
+B={1,2,6,7}
+A.issubset(B)
+o/p-> True
+
+A.issuperset(B)
+o/p-> True
+
+A-B
+o/p-> {1, 8, 'A', 'B'}
